@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Home
+// RSVP
+//
+
+
+/** @var \Illuminate\Routing\Router $router */
+$router = app('router');
+
+$router->get('/{page?}', 'PageController@showPage');
+//$router->get('/on-the-day', 'PageController@onTheDay');
+//$router->get('/travel-and-accommodation', 'PageController@travelAndAccommodation');
+//$router->get('/gifts', 'PageController@gifts');
+//$router->get('/rsvp', 'PageController@rsvp');
+$router->get('/rsvp/{search}', 'PageController@searchForInvite');
+$router->post('/rsvp/{rsvp}', 'PageController@handleRsvp');

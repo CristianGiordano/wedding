@@ -11,6 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        \App\Rsvp::create([
+            'guest_names' => 'Mr & Mrs Giordano [Test]',
+            'surname' => 'giordano',
+        ]);
     }
 }
