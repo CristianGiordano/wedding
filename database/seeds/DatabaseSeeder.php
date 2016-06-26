@@ -1,5 +1,7 @@
 <?php
 
+use App\Rsvp;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,7 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Rsvp::create([
+        Model::unguard();
+
+        Rsvp::truncate();
+
+        Rsvp::create([
             'guest_names' => 'Mr & Mrs Giordano [Test]',
             'surname' => 'giordano',
         ]);
