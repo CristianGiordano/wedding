@@ -10,6 +10,7 @@ class Rsvp extends Model
 
     protected $fillable = [
         'is_attending',
+        'guests',
         'preference_arrival_drink',
         'preference_table_drink',
         'has_dietry_requirements',
@@ -18,7 +19,8 @@ class Rsvp extends Model
     ];
 
     protected $casts = [
-        'is_attending' => 'boolean',
+        'is_attending'            => 'boolean',
+        'guests'                  => 'json',
         'has_dietry_requirements' => 'boolean',
     ];
 }

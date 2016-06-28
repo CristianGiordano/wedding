@@ -7,7 +7,6 @@
         Vue.config.debug = true;
         Vue.config.devtools = true
 
-
         new Vue({
             el: 'body',
             data: {
@@ -24,6 +23,7 @@
                     has_dietry_requirements: '',
                     dietry_requirements: '',
                     comments: '',
+                    guests: [],
                 },
             },
 
@@ -45,19 +45,22 @@
                                     return this.noResultsFound = true;
                                 }
 
-                                this.rsvp.id = response.data[0].id;
-                                this.rsvp.guest_names = response.data[0].guest_names;
-                                this.rsvp.surname = response.data[0].surname;
-                                this.rsvp.is_attending = response.data[0].is_attending;
-                                this.rsvp.preference_arrival_drink = response.data[0].preference_arrival_drink;
-                                this.rsvp.preference_table_drink = response.data[0].preference_table_drink;
-                                this.rsvp.has_dietry_requirements = response.data[0].has_dietry_requirements;
-                                this.rsvp.dietry_requirements = response.data[0].dietry_requirements;
-                                this.rsvp.comments = response.data[0].comments;
+                                this.rsvp = response.data[0];
                                 this.stage = 'responding';
+
+//                                this.rsvp.id = response.data[0].id;
+//                                this.rsvp.guest_names = response.data[0].guest_names;
+//                                this.rsvp.surname = response.data[0].surname;
+//                                this.rsvp.is_attending = response.data[0].is_attending;
+//                                this.rsvp.preference_arrival_drink = response.data[0].preference_arrival_drink;
+//                                this.rsvp.preference_table_drink = response.data[0].preference_table_drink;
+//                                this.rsvp.has_dietry_requirements = response.data[0].has_dietry_requirements;
+//                                this.rsvp.dietry_requirements = response.data[0].dietry_requirements;
+//                                this.rsvp.comments = response.data[0].comments;
+//                                this.rsvp.guests = response.data[0].guests;
+//                                this.stage = 'responding';
                             }, function (response) {
                                 $('#js-search-invite').button('reset');
-                                console.log(response);
                             });
                 },
 
@@ -105,6 +108,7 @@
 
         {{-- Handle more than one returned rsvp --}}
         {{-- Handle only evening guest --}}
+        {{-- Handle actual RSVP per guest. Maybe checkboxes of guests (we can better plan numbers then)--}}
 
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
@@ -131,7 +135,7 @@
 
                     <div v-show="isResponding">
 
-                        <h2>Hey @{{ rsvp.guest_names }}</h2>
+                        <h2>Hey @{{ rsvp.recipients }}</h2>
 
                         <div class="form-group">
                             <label>Are you able to make the day?</label>
@@ -148,6 +152,16 @@
                         </div>
 
                         <div v-show="rsvp.is_attending">
+
+                            <div class="form-group">
+                                <label>Please confirm who is able to make it:</label>
+
+                                <div class="checkbox" v-for="guest in rsvp.guests">
+                                    <label>
+                                        <input type="checkbox" v-model="guest.is_attending"> @{{ guest.name }}
+                                    </label>
+                                </div>
+                            </div>
 
                             <div class="form-group">
                                 <label>On arrival, what would you prefer?</label>
@@ -209,7 +223,7 @@
 
                         </div>
 
-                        <div class="form-group" v-show="enoughInformationSupplied">
+                        <div class="form-group text-center" v-show="enoughInformationSupplied">
                             <button type="button" class="btn btn-primary" v-on:click.prevent="sendRsvp">Send RSVP</button>
                         </div>
                     </div>

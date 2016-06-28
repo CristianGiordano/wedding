@@ -14,9 +14,10 @@ class CreateRsvpTable extends Migration
     {
         Schema::create('rsvp', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('guest_names');
+            $table->string('recipients');
             $table->string('surname');
             $table->boolean('is_attending')->nullable();
+            $table->text('guests');
             $table->enum('preference_arrival_drink', ['pimms', 'prosecco', 'soft'])->nullable();
             $table->enum('preference_table_drink', ['red', 'white', 'soft'])->nullable();
             $table->boolean('has_dietry_requirements')->nullable();

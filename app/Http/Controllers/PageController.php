@@ -31,6 +31,7 @@ class PageController extends Controller
             'has_dietry_requirements'  => $request->input('has_dietry_requirements') == 'yes',
             'dietry_requirements'      => $request->input('dietry_requirements'),
             'comments'                 => $request->input('comments', ''),
+            'guests'                   => $request->input('guests'),
         ]);
 
         return $rsvp;
