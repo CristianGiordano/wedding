@@ -17,7 +17,7 @@
                             <div class="col-md-offset-2 col-md-8">
 
                                 <div class="page-title animation fadeInUp animated">
-                                    <h1>GIFT REGISTRY</h1>
+                                    <h1>GIFTS</h1>
 
                                     <div class="heart-divider">
                                         <span class="white-line"></span>
@@ -27,7 +27,8 @@
                                     </div>
 
                                     <p>If you were thinking of giving a gift to help us on our way, <br>
-                                        A gift of money in a card would really make our day!</p>
+                                        A gift of money in a card would really make our day! <br>
+                                        &lt;3</p>
 
                                     <div class="heart-divider">
                                         <span class="white-line"></span>
