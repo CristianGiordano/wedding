@@ -47,7 +47,7 @@
 
         <li>
             <!-- SLIDE IMAGE -->
-            <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url(http://placehold.it/1920x1080);">
+            <div data-stellar-ratio="0.5" class="slide-image" style="background-image:url('/images/photos/us-21920-1080.jpg');">
             </div>
 
             <!-- SLIDE OVERLAY -->

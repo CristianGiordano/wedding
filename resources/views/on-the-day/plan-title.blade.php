@@ -6,9 +6,7 @@
         <div class="section-title animation fadeInUp animated">
             <h2>THE PLAN</h2>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh.  Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue  ex, vitae
-            </p>
+            <p>Here's what to expect on the day.</p>
 
         </div>
     </div>

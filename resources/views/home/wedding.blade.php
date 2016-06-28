@@ -15,7 +15,7 @@
                     </h2>
 
                     <p class="blurb">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing lorem ipsum dolor sit amet, consectetur adipiscing
+                        Some essential information for the day.
                     </p>
 
                     <div class="heart-divider">
@@ -38,13 +38,13 @@
                     <div class="row">
 
                         <!-- ITEM-1 -->
-                        <div class="wedding-item col-md-4 animation fadeIn">
+                        <div class="wedding-item col-md-6 animation fadeIn">
 
                             <!--PHOTO-ITEM-->
                             <div class="photo-item">
 
                                 <!--PHOTO-->
-                                <img src="http://placehold.it/290x290" alt="" class="hover-animation image-zoom-in">
+                                <img src="/images/photos/on-the-day.jpg" alt="" class="hover-animation image-zoom-in">
 
                                 <!--PHOTO OVERLAY-->
                                 <div class="layer wh95 hidden-black-overlay hover-animation fade-in">
@@ -72,7 +72,7 @@
                             <div class="title-excerpt">
                                 <h3><a href="/on-the-day">ON THE DAY</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non <br>
+                                    What to expect, when to arrive and where to go. Everything you should need to know<br>
                                     <a href="/on-the-day" class="de-button small">Find out more</a>
                                 </p>
                             </div>
@@ -82,58 +82,58 @@
 
 
                         <!-- ITEM-2 -->
-                        <div class="wedding-item col-md-4 animation delay1 fadeIn">
+                        {{--<div class="wedding-item col-md-6 animation delay1 fadeIn">--}}
 
-                            <!--PHOTO-ITEM-->
-                            <div class="photo-item">
+                            {{--<!--PHOTO-ITEM-->--}}
+                            {{--<div class="photo-item">--}}
 
-                                <!--PHOTO-->
-                                <img src="http://placehold.it/290x290" alt="" class="hover-animation image-zoom-in">
+                                {{--<!--PHOTO-->--}}
+                                {{--<img src="http://placehold.it/290x290" alt="" class="hover-animation image-zoom-in">--}}
 
-                                <!--PHOTO OVERLAY-->
-                                <div class="layer wh95 hidden-black-overlay hover-animation fade-in">
-                                </div><!--END of PHOTO OVERLAY-->
+                                {{--<!--PHOTO OVERLAY-->--}}
+                                {{--<div class="layer wh95 hidden-black-overlay hover-animation fade-in">--}}
+                                {{--</div><!--END of PHOTO OVERLAY-->--}}
 
-                                <div class="layer wh95 border-photo-caption fade-out">
+                                {{--<div class="layer wh95 border-photo-caption fade-out">--}}
 
-                                </div><!--END of PHOTO CAPTION-->
+                                {{--</div><!--END of PHOTO CAPTION-->--}}
 
-                                <!--ICON LINK-->
-                                <div class="layer wh100 hidden-link hover-animation delay1 fade-in">
-                                    <div class="alignment">
-                                        <div class="v-align center-middle">
+                                {{--<!--ICON LINK-->--}}
+                                {{--<div class="layer wh100 hidden-link hover-animation delay1 fade-in">--}}
+                                    {{--<div class="alignment">--}}
+                                        {{--<div class="v-align center-middle">--}}
 
-                                            <a href="/travel-and-accommodation" class="de-button outline small">
-                                                MORE INFO
-                                            </a>
+                                            {{--<a href="/travel-and-accommodation" class="de-button outline small">--}}
+                                                {{--MORE INFO--}}
+                                            {{--</a>--}}
 
-                                        </div>
-                                    </div>
-                                </div><!--END of ICON LINK-->
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div><!--END of ICON LINK-->--}}
 
-                            </div><!--END of PHOTO-ITEM-->
+                            {{--</div><!--END of PHOTO-ITEM-->--}}
 
-                            <!-- TITLE & EXCERPT -->
-                            <div class="title-excerpt">
-                                <h3><a href="/travel-and-accommodation">TRAVEL &amp; ACCOMMODATION</a></h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non <br>
-                                    <a href="/travel-and-accommodation" class="de-button small">Find out more</a>
-                                </p>
-                            </div>
-                            <!-- END of TITLE & EXCERPT -->
+                            {{--<!-- TITLE & EXCERPT -->--}}
+                            {{--<div class="title-excerpt">--}}
+                                {{--<h3><a href="/travel-and-accommodation">TRAVEL &amp; ACCOMMODATION</a></h3>--}}
+                                {{--<p>--}}
+                                    {{--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non <br>--}}
+                                    {{--<a href="/travel-and-accommodation" class="de-button small">Find out more</a>--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                            {{--<!-- END of TITLE & EXCERPT -->--}}
 
-                        </div><!-- END of ITEM-2 -->
+                        {{--</div><!-- END of ITEM-2 -->--}}
 
 
                         <!-- ITEM-3 -->
-                        <div class="wedding-item col-md-4 animation delay2 fadeIn">
+                        <div class="wedding-item col-md-6 animation delay1 fadeIn">
 
                             <!--PHOTO-ITEM-->
                             <div class="photo-item">
 
                                 <!--PHOTO-->
-                                <img src="http://placehold.it/290x290" alt="" class="hover-animation image-zoom-in">
+                                <img src="/images/photos/gifts.jpg" alt="" class="hover-animation image-zoom-in">
 
                                 <!--PHOTO OVERLAY-->
                                 <div class="layer wh95 hidden-black-overlay hover-animation fade-in">
@@ -162,7 +162,7 @@
                             <div class="title-excerpt">
                                 <h3><a href="/gifts">GIFTS</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non <br>
+                                    It's your present not your presents that's important to us, however if you wish continue reading<br>
                                     <a href="/gifts" class="de-button small">Find out more</a>
                                 </p>
                             </div>

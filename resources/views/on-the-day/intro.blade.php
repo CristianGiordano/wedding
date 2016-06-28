@@ -11,7 +11,7 @@
                 <span class="grey-line"></span>
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis
+                Here's the plan for our special day.
             </p>
         </div>
 

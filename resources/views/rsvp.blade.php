@@ -103,6 +103,9 @@
 
         @include('rsvp.intro')
 
+        {{-- Handle more than one returned rsvp --}}
+        {{-- Handle only evening guest --}}
+
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
 

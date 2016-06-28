@@ -10,9 +10,7 @@
                 <i class="de-icon-heart grey-heart"></i>
                 <span class="grey-line"></span>
             </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis
-            </p>
+            <p>We really hope you can make it!</p>
         </div>
 
     </div>

@@ -2,7 +2,7 @@
 
     <div class="col-sm-12 col-md-4 animation delay1 fadeInRight animated">
         <h3>GET TO THE DUKE!</h3>
-        <p>Make your way to The Duke of Cumberland. There will be a glass of bubbly or fruity depending on your preference. Also SNACKS! NOM NOM NOM!</p>
+        <p>Make your way to <a href="https://www.google.co.uk/maps/place/The+Duke+of+Cumberland+Arms/@51.0243056,-0.7286653,17z/data=!3m1!4b1!4m5!3m4!1s0x4875cabb8b6380ab:0x1ebbba16d6471c6f!8m2!3d51.0243022!4d-0.7264766">The Duke of Cumberland</a>. There will be a glass of bubbly or fruity depending on your preference. Also SNACKS! NOM NOM NOM!</p>
     </div>
 
     <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated">
@@ -16,7 +16,7 @@
 
     <div class="col-sm-12 col-md-offset-1 col-md-4 text-center">
         <div class="photo-item frame-border animation delay1 fadeInLeft animated">
-            <img src="http://placehold.it/290x290" alt="">
+            <img src="/images/photos/getting-there.jpg" alt="">
         </div>
     </div>
 

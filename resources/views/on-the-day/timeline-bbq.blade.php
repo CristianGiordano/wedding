@@ -2,7 +2,7 @@
 
     <div class="col-sm-12 col-md-offset-1 col-md-4 text-center">
         <div class="photo-item frame-border animation delay1 fadeInLeft animated">
-            <img src="http://placehold.it/290x290" alt="">
+            <img src="/images/photos/food.jpg" alt="">
         </div>
     </div>
 
