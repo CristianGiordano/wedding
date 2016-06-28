@@ -18,8 +18,18 @@ class DatabaseSeeder extends Seeder
         Rsvp::truncate();
 
         Rsvp::create([
-            'guest_names' => 'Mr & Mrs Giordano [Test]',
+            'guest_names' => 'Mr & Mrs Giordano',
             'surname' => 'giordano',
+        ]);
+
+        Rsvp::create([
+            'guest_names' => 'Mr & Mrs Thurlow',
+            'surname' => 'thurlow',
+        ]);
+
+        Rsvp::create([
+            'guest_names' => 'Mr & Mrs Partridge',
+            'surname' => 'partridge',
         ]);
     }
 }
