@@ -162,7 +162,7 @@
                             <div class="title-excerpt">
                                 <h3><a href="/gifts">GIFTS</a></h3>
                                 <p>
-                                    It's your present not your presents that's important to us, however if you wish continue reading<br>
+                                    It's your presence and not your presents that's important to us, however if you can please continue reading<br>
                                     <a href="/gifts" class="de-button small">Find out more</a>
                                 </p>
                             </div>
