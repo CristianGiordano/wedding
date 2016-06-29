@@ -72,7 +72,7 @@
                             <div class="title-excerpt">
                                 <h3><a href="/on-the-day">ON THE DAY</a></h3>
                                 <p>
-                                    What to expect, when to arrive and where to go. Everything you should need to know. <br>
+                                    What to expect, when to arrive and where to go. Everything you should need to know. <br><br>
                                     <a href="/on-the-day" class="de-button small">Find out more</a>
                                 </p>
                             </div>
@@ -162,7 +162,7 @@
                             <div class="title-excerpt">
                                 <h3><a href="/gifts">GIFTS</a></h3>
                                 <p>
-                                    It's your presence and not your presents that's important to us, however if you can please continue reading. <br>
+                                    It's your presence and not your presents that's important to us, however if you must please continue reading. <br>
                                     <a href="/gifts" class="de-button small">Find out more</a>
                                 </p>
                             </div>
