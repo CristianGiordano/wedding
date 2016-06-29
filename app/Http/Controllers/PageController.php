@@ -17,7 +17,7 @@ class PageController extends Controller
     {
         $query = strtolower($query);
 
-        $rsvp = Rsvp::where('surname', $query)->get();
+        $rsvp = Rsvp::where('surname', 'LIKE',  "%{$query}%")->get();
 
         return $rsvp;
     }
