@@ -9,6 +9,7 @@
     <link rel="icon" href="/images/favicon.jpg">
 
     @include('partials.styles')
+    @yield('styles.after')
 </head>
 
 <body class="@yield('body.classes')">
@@ -28,6 +29,6 @@
 @include('partials.footer')
 
 @include('partials.scripts')
-
+@yield('scripts.after')
 </body>
 </html>
