@@ -46,15 +46,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Rsvp::create([
-            'recipients' => 'Mr & Mrs ',
-            'guests'     => [
-                ['name' => '', 'is_attending' => true],
-                ['name' => '', 'is_attending' => true],
-            ],
-            'surname'    => '',
-        ]);
-
-        Rsvp::create([
             'recipients' => 'Mr & Mrs Hutchinson',
             'guests'     => [
                 ['name' => 'Dave Hutchinson', 'is_attending' => true],
