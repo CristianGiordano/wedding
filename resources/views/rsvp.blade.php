@@ -29,7 +29,8 @@
 
             methods: {
                 searchForInvite: function () {
-                    if (this.query == '') {
+
+                    if (this.query.length < 3) {
                         return;
                     }
 
@@ -87,13 +88,6 @@
                 },
                 isComplete: function () {
                     return this.stage === 'completed';
-                },
-                enoughInformationSupplied: function () {
-                    return this.rsvp.is_attending === false || (
-                                    this.rsvp.is_attending &&
-                                    this.rsvp.preference_arrival_drink &&
-                                    this.rsvp.preference_table_drink
-                            );
                 }
             }
         })
@@ -105,10 +99,6 @@
     <div class="container">
 
         @include('rsvp.intro')
-
-        {{-- Handle more than one returned rsvp --}}
-        {{-- Handle only evening guest --}}
-        {{-- Handle actual RSVP per guest. Maybe checkboxes of guests (we can better plan numbers then)--}}
 
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
@@ -156,42 +146,10 @@
                             <div class="form-group">
                                 <label>Please confirm who is able to make it:</label>
 
-                                <div class="checkbox" v-for="guest in rsvp.guests">
-                                    <label>
-                                        <input type="checkbox" v-model="guest.is_attending"> @{{ guest.name }}
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>On arrival, what would you prefer?</label>
-                                <div class="ajax-input ajax-radio">
-                                    <div>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_arrival_drink == 'pimms' }">
-                                            <input type="radio" name="preference_arrival_drink" id="accept" v-model="rsvp.preference_arrival_drink" value="pimms"> Pimms
-                                        </label>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_arrival_drink == 'prosecco' }">
-                                            <input type="radio" name="preference_arrival_drink" id="decline" v-model="rsvp.preference_arrival_drink" value="prosecco"> Prosecco
-                                        </label>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_arrival_drink == 'soft' }">
-                                            <input type="radio" name="preference_arrival_drink" id="decline" v-model="rsvp.preference_arrival_drink" value="soft"> Something soft
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>For the table, what would you prefer?</label>
-                                <div class="ajax-input ajax-radio">
-                                    <div>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_table_drink == 'red' }">
-                                            <input type="radio" name="preference_table_drink" id="accept" v-model="rsvp.preference_table_drink" value="red"> Red
-                                        </label>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_table_drink == 'white' }">
-                                            <input type="radio" name="preference_table_drink" id="decline" v-model="rsvp.preference_table_drink" value="white"> White
-                                        </label>
-                                        <label class="btn btn-primary no-icon" :class="{'active' : rsvp.preference_table_drink == 'soft' }">
-                                            <input type="radio" name="preference_table_drink" id="decline" v-model="rsvp.preference_table_drink" value="soft"> Something soft
+                                <div class="ajax-input ajax-checkbox">
+                                    <div class="checkbox" v-for="guest in rsvp.guests">
+                                        <label class="btn btn-primary custom-option-icon" :class="{'active active-icon': guest.is_attending }">
+                                            <input type="checkbox" v-model="guest.is_attending"> @{{ guest.name }}
                                         </label>
                                     </div>
                                 </div>
@@ -223,7 +181,7 @@
 
                         </div>
 
-                        <div class="form-group text-center" v-show="enoughInformationSupplied">
+                        <div class="form-group text-center">
                             <button type="button" class="btn btn-primary" v-on:click.prevent="sendRsvp">Send RSVP</button>
                         </div>
                     </div>
