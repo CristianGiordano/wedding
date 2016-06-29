@@ -48,7 +48,7 @@
                 <i class="de-icon-heart grey-heart"></i>
                 <span class="grey-line"></span>
             </div>
-            <p>Here's the plan for our special day.</p>
+            <p>Here's the plan for our special day. Please come dressed appropriately, suits aren't required, we only ask you are comfortable and look amazing! Preferably no jeans.</p>
         </div>
 
     </div>
