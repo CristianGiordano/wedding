@@ -8,7 +8,7 @@
     <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated">
         <div class="arrow-left"></div>
         <div class="story-date">
-            <div class="date-only" style="margin-top: 16px;">18:00</div>
+            <div class="date-only" style="margin-top: 16px;">18:30</div>
             <div class="month-year">onwards</div>
         </div>
         <div class="arrow-right"></div>

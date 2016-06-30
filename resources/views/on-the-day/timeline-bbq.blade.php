@@ -9,7 +9,7 @@
     <div class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn animated">
         <div class="arrow-left"></div>
         <div class="story-date">
-            <div class="date-only">16:00</div>
+            <div class="date-only">17:00</div>
         </div>
         <div class="arrow-right"></div>
         <div class="clearboth"></div>
