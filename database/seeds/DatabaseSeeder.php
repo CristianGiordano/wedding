@@ -174,5 +174,15 @@ class DatabaseSeeder extends Seeder
             ],
             'surname'    => 'armstrong',
         ]);
+
+        Rsvp::create([
+            'recipients' => 'Mr & Mrs Barrass',
+            'guests'     => [
+                ['name' => 'Daniel Barrass', 'is_attending' => true],
+                ['name' => 'Carolina Barrass', 'is_attending' => true],
+                ['name' => 'Oliver Barrass', 'is_attending' => true],
+            ],
+            'surname'    => 'barrass',
+        ]);
     }
 }
