@@ -156,5 +156,23 @@ class DatabaseSeeder extends Seeder
             ],
             'surname'    => 'west',
         ]);
+
+        Rsvp::create([
+            'recipients' => 'Mr Hoyland & Miss Wolf',
+            'guests'     => [
+                ['name' => 'Harri Wolf', 'is_attending' => true],
+                ['name' => 'Sam Hoyland', 'is_attending' => true],
+            ],
+            'surname'    => 'hoyland|wolf',
+        ]);
+
+        Rsvp::create([
+            'recipients' => 'Mr & Mrs Armstrong',
+            'guests'     => [
+                ['name' => 'Laura Armstrong', 'is_attending' => true],
+                ['name' => 'Steve Armstrong', 'is_attending' => true],
+            ],
+            'surname'    => 'armstrong',
+        ]);
     }
 }
