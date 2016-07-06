@@ -17,7 +17,7 @@
         <div class="clearboth"></div>
     </div>
 
-    <div class="col-sm-12 col-md-4 col-md-push-6 animation delay1 fadeInRight animated">
+    <div class="col-sm-12 col-md-4 col-md-pull-6 animation delay1 fadeInRight animated">
         <h3>EVENING GUEST ARRIVAL</h3>
         <p>Grab a drink and make sure you come and find us when you arrive. We'll want to hug the crap out of you.</p>
     </div>
