@@ -15,7 +15,7 @@ class PageController extends Controller
 
     public function searchForInvite($query)
     {
-        $query = strtolower($query);
+        $query = strtolower(trim($query));
 
         $rsvp = Rsvp::where('surname', 'LIKE',  "%{$query}%")->get();
 
