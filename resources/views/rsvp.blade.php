@@ -10,9 +10,11 @@
         new Vue({
             el: 'body',
             data: {
+                selectedRsvp: '',
                 noResultsFound: false,
                 stage: 'searching',
                 query: '',
+                searchResults: [],
                 rsvp: {
                     id: '',
                     guest_names: '',
@@ -23,7 +25,7 @@
                     has_dietry_requirements: '',
                     dietry_requirements: '',
                     comments: '',
-                    guests: [],
+                    guests: []
                 },
             },
 
@@ -37,6 +39,7 @@
                     $('#js-search-invite').button('loading');
 
                     this.noResultsFound = false;
+                    this.searchResults = [];
 
                     this.$http.get(this.urlForSearching)
                             .then(function (response) {
@@ -46,8 +49,11 @@
                                     return this.noResultsFound = true;
                                 }
 
-                                this.rsvp = response.data[0];
-                                this.stage = 'responding';
+                                if (response.data.length > 1) {
+                                    return this.searchResults = response.data;
+                                }
+
+                                this.setRsvp(response.data[0]);
 
 //                                this.rsvp.id = response.data[0].id;
 //                                this.rsvp.guest_names = response.data[0].guest_names;
@@ -70,6 +76,28 @@
                             .then(function (response) {
                                 this.stage = 'completed';
                             });
+                },
+
+                setRsvp: function(rsvp) {
+                    this.rsvp = rsvp;
+                    this.stage = 'responding';
+                },
+
+                hasSearchResults: function() {
+                    return this.searchResults.length > 0;
+                },
+
+                handleSelectRsvp: function() {
+                    // Find rsvp from results
+                    var selectedRsvpId = this.selectedRsvp;
+                    var filteredResult = this.searchResults.filter(function(result) {
+                        return result.id == selectedRsvpId;
+                    })
+
+
+                    this.setRsvp(filteredResult[0]);
+                    this.searchResults = [];
+                    this.selectedRsvp = '';
                 }
             },
 
@@ -120,6 +148,18 @@
                         <br>
                         <p class="text-center" style="margin-bottom: 0;">
                             <button type="button" id="js-search-invite" class="btn btn-primary" v-on:click.prevent="searchForInvite()">Find invitation</button>
+                        </p>
+
+                        <p v-if="hasSearchResults()">
+                            <br>
+                            <span style="color: #E53A3A">Looks like we found more than we expected, pick your RSVP below:</span>
+
+                            <select class="form-control" v-on:change="handleSelectRsvp()" v-model="selectedRsvp">
+                                <option>Select RSVP</option>
+                                <option v-for="result in searchResults" :value="result.id">
+                                    @{{ result.recipients }}
+                                </option>
+                            </select>
                         </p>
                     </div>
 
