@@ -156,7 +156,7 @@
 
                             <select class="form-control" v-on:change="handleSelectRsvp()" v-model="selectedRsvp">
                                 <option>Select RSVP</option>
-                                <option v-for="result in searchResults" :value="result.id">
+                                <option v-for="result in searchResults" :key="result.id" :value="result.id">
                                     @{{ result.recipients }}
                                 </option>
                             </select>
